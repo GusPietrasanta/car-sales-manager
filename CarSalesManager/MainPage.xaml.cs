@@ -632,10 +632,26 @@ namespace CarSalesManager
             else
 
             {
+                customerNameTextBox.Text = namesArrayList[foundInIndex].ToString();
                 // Call the displayAllCustomers event handler.
-                displayAllCustomersButton_Click(null, null);
+                // displayAllCustomersButton_Click(null, null);
                 // Get the phone number from the array in the same index as the name was found in, and set customerPhoneTextBox to that value.
                 customerPhoneTextBox.Text = phoneNumbersArrayList[foundInIndex].ToString();
+
+                // Disable customer name and customer phone textboxes.
+                customerNameTextBox.IsReadOnly = true;
+                customerPhoneTextBox.IsReadOnly = true;
+
+                // Also add some style to make the text boxes look "locked" (Italic, Bold to text, and darker gray for the text box).
+                customerNameTextBox.FontStyle = Windows.UI.Text.FontStyle.Italic;
+                customerNameTextBox.FontWeight = Windows.UI.Text.FontWeights.Bold;
+                customerNameTextBox.Background = new SolidColorBrush(Windows.UI.Colors.DarkGray);
+                customerPhoneTextBox.FontStyle = Windows.UI.Text.FontStyle.Italic;
+                customerPhoneTextBox.FontWeight = Windows.UI.Text.FontWeights.Bold;
+                customerPhoneTextBox.Background = new SolidColorBrush(Windows.UI.Colors.DarkGray);
+
+                // Set focus to the vehicle price text box.
+                vehiclePriceTextBox.Focus(FocusState.Programmatic);
             }
 
         }

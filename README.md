@@ -17,15 +17,15 @@ The app uses C# code to handle user interactions and perform calculations. Here'
 ## 🚀 Features
 
 ### Displaying All Customers
-The "Display all Customers" button generates a summary of all customers' names and phone numbers. It iterates through the names and phone numbers lists, generating a string that will be displayed in the Summary Details Text Block.
+This button displays a summary of all saved customers' names and phone numbers.
 
 ### Search for Customers
 
-The app provides a search functionality to find customers by name. It uses a sequential search algorithm to look for the name in the list of customer names. If the name is found, the corresponding phone number is displayed. Otherwise, an error message is shown.
+The app provides a search functionality to find customers by name. If the name is found, the corresponding phone number will fill the phone number text box. Otherwise, an error message is shown.
 
 ### Delete Customer
 
-Users can delete a customer from the records by entering the customer's name. The app performs a search for the name and if found, removes the customer from the list of names and phone numbers. It then updates the summary details and displays a confirmation message showing the deleted customer's name, phone number, and the new length of the list.
+Users can delete a customer from the records by entering the customer's name. The app performs a search for the name and if found, removes the customer from the list of names and phone numbers.
 
 ### Display All Vehicle Makes
 
@@ -33,11 +33,11 @@ This feature allows users to view all the available vehicle makes in the applica
 
 ### Search for Vehicle Makes
 
-Users can search for a specific vehicle make using the binary search algorithm. The app performs a binary search on the sorted list of vehicle makes and displays a message indicating whether the make was found or not. If found, it also shows the index of the make in the list.
+Users can search for a specific vehicle make using the binary search algorithm. The app performs a binary search on the sorted list of vehicle makes and displays a message indicating whether the make was found or not.
 
 ### Insert Vehicle Make
 
-Users can add a new vehicle make to the list. The app first checks if the make already exists using the binary search algorithm. If not found, the make is added to the list, and the list is sorted again. The updated list of vehicle makes is then displayed in the summary details. If the make already exists, an error message is shown.
+Users can add a new vehicle make to the list. The app first checks if the make already exists using the binary search algorithm. If not found, the make is added to the list, and the list is sorted again.
 
 ## 🛠️ Built With
 This project was built using the following technologies:
@@ -46,9 +46,6 @@ This project was built using the following technologies:
 - C#: Programming language used for app development.
 - WPF (Windows Presentation Foundation): Framework used for building the user interface and handling user interactions.
 - XAML (eXtensible Application Markup Language): Markup language used to define the UI layout and design.
-
-## 📝 Licence
-This project is licensed under the [MIT License](LICENSE).
 
 ## 📷 Screenshots
 
@@ -69,10 +66,13 @@ This project is licensed under the [MIT License](LICENSE).
 ![](https://lh3.googleusercontent.com/pw/AJFCJaV2n_Y8XZhOpJrJz_i62W0AKLLXB-D1nd4Cx2vIYdxQDXH7n6LE3s989o0st-AyOIgdWvqnkIXEuYAlU939gf-m2GLo1nWmEocUrnfqmCDDUKNhUOdPsp9F0W52qsUlHqlFY8u8DZ0_6qhXxqMPWmUY=w958-h533-s-no)
 
 ### Search for Customers
-![](https://lh3.googleusercontent.com/pw/AJFCJaXbHLCWgzRnhD4Y2dO_KBcnG4XoTeLuBdiB7UkSdDYqCIWwxASPdH4_M7mCNuYSlbFDYHzh9S80DSFWigbZwrS_vh6J0UYZU-S3thyC1pg6HPowM5I_UAV1bW8gKSfDHDJ1Hv3l56k7ax7kETcmkk1b=w958-h470-s-no)
+![](https://lh3.googleusercontent.com/pw/AJFCJaWd2zMQeqn8tFHDR7ZhSPHTadC8x-Cil6bP58byuLoh1SWerLwv0aAEX4OZ32dcGwT9ZBXvEcswqetW8rk73LgkpGLri-EJdyaH0baWU8S7gTTpBZCrmaxlJPC_Yg4aXx-g6l6Q_dbySUx-NYG2Pmfe=w958-h533-s-no)
 
 ### Delete Customer
 ![](https://lh3.googleusercontent.com/pw/AJFCJaWBmIvorXTwLr_613fTJHTQlM5PJXKMVck3cH54EuRvV71yEK9y00fh3zj9dur_F560VN1VD35TQd5R64BN1jd6bNVHWA8UtDe-m6mudYPO1erpN2_SPFW2ak2RGnRYFoQi84DwGi45gmBZD0zZbltG=w958-h470-s-no)
 
 ### Insert Vehicle Make
 ![](https://lh3.googleusercontent.com/pw/AJFCJaUmxc3Fkt33pRQ1KRbk_RUjAnLi1pNbWEIcT69V16M2zzt3-Eq_zc4r0bmSbFNLzdbSW8Tez6Rvy2Swuylnbv9PqrZdCIhqi2aVREMAdXcWtHSywGC7FvalukFf53jJ-6pn9AKxKwhtPpYLZbFmRdsg=w958-h571-s-no)
+
+## 📝 Licence
+This project is licensed under the [MIT License](LICENSE).
