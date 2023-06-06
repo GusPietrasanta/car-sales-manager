@@ -1,5 +1,7 @@
 # Car Sales Manager
 
+![](https://lh3.googleusercontent.com/pw/AJFCJaV45nazQzs4oCB8RMNudEY4RlUYUdKIjE3vMS11itYDiOTJEW8IsNync62wnjSU5vRx-eQrduPCFSwooit4_g-gPfKBvsssDIy94IzFjJXGkKR9CRQsSNrCtiuhkqyTMSPW3FOKlafTkar3OxecCkT1=w958-h508-s-no)
+
 ## ✏️ Overview
 This practice project is a mock WPF customer management application built using C# and XAML. It allows users to perform basic calculations, manage customer records and perform various operations such as searching for customers, deleting customers, and managing vehicle makes. 
 The app utilises event handlers to handle button clicks and incorporates error handling and input validation to catch and display any errors that may occur during input parsing or validation. It provides a user-friendly interface for inputting vehicle and customer details, calculating costs, and generating a brief summary.
