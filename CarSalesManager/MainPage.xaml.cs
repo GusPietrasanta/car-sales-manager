@@ -1,6 +1,4 @@
-﻿// Carlos Pietrasanta
-// 18/11/2022
-// Assignment CarSalesV3
+﻿// Gus Pietrasanta
 
 using System;
 using System.Collections.Generic;
@@ -202,6 +200,12 @@ namespace CarSalesManager
 
             // Clear Final Amount.
             finalAmountTextBox.Text = "";
+
+            // Reset date picker
+            collectionDatePicker.Date = DateTime.Today;
+
+            // Reset time picker
+            pickUpTimePicker.Time = TimeSpan.Zero;
 
             // Enable customer name.
             customerNameTextBox.IsReadOnly = false;
@@ -869,7 +873,5 @@ namespace CarSalesManager
 
             return foundInIndex;
         }
-
-        // End of additions for part 3 of the app.
     }
 }

@@ -9,9 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
 
     <!--  
-    Carlos Pietrasanta
-    18/11/2022
-    Assignment CarSalesV3   
+    Gus Pietrasanta
     -->
     
     <Grid Background="#95A2B2">
@@ -20,7 +18,7 @@
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             
             <!-- App title/header -->
-            <TextBlock Text="Dodgy Brothers Motor Manager" FontSize="45" Margin="10" HorizontalAlignment="Center" FontFamily="Century Gothic" FontStyle="Italic" TextDecorations="Underline"/>
+            <TextBlock Text="Gus' Car Sales Manager" FontSize="45" Margin="10" HorizontalAlignment="Center" FontFamily="Century Gothic" FontStyle="Italic" TextDecorations="Underline"/>
             
             <!-- Start of StackPanel that holds the 4 main vertical columns -->
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -144,13 +142,13 @@
                     <TextBlock Text="Collection Date:" Margin="0,0,0,2" HorizontalAlignment="Center" FontSize="20" />
                     <CalendarDatePicker x:Name="collectionDatePicker" Width="180" Background="LightGray" HorizontalAlignment="Center" PlaceholderText="Select Collection Date"/>
                 </StackPanel>
-                
+
                 <!-- StackPanel for Pickup Time -->
                 <StackPanel Orientation="Vertical" Margin="10" >
                     <TextBlock Text="Pickup Time:" Margin="0,0,0,2" FontSize="20" HorizontalAlignment="Center" />
                     <TimePicker HorizontalAlignment="Center" Background="LightGray" x:Name="pickUpTimePicker" />
                 </StackPanel>
-                
+
                 <!-- Save Button -->
                 <Button Content="Save" x:Name="saveButton" Padding="10" FontSize="25" Width="170" Margin="10" BorderThickness="2" BorderBrush="Black" Click="saveButton_Click" />
                 <!-- Reset Button -->
@@ -158,15 +156,9 @@
                 <!-- Summary Button -->
                 <Button Content="Summary" x:Name="summaryButton" Padding="10" FontSize="25" Width="170" Margin="10" BorderThickness="2" BorderBrush="Black" Click="summaryButton_Click" />
 
-            <!-- End of StackPanel that holds Collection Date, Pickup Time, Save, Reset and Summary buttons horizontally -->
+                <!-- End of StackPanel that holds Collection Date, Pickup Time, Save, Reset and Summary buttons horizontally -->
             </StackPanel>
 
-            <!-- StackPanel for Developer Name and ITWorks logo -->
-            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock Text="Developer: Carlos Pietrasanta for " FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Image Source="Images/logo.png" Height="47" Width="95" VerticalAlignment="Center"/>
-            </StackPanel>
-            
         </StackPanel>
     </Grid>
 </Page>
