@@ -71,7 +71,6 @@ namespace CarSalesManager
             itemsList.Add("Evie");
             itemsList.Add("Jessica");
             itemsList.Add("Andrew");
-            itemsList.Add("Harrison");
             return itemsList;
         }
                 
@@ -88,7 +87,6 @@ namespace CarSalesManager
             itemsList.Add("(08) 8791 2081");
             itemsList.Add("(08) 8322 8180");
             itemsList.Add("(08) 8785 0866");
-            itemsList.Add("(08) 8751 7626");
             return itemsList;
         }
                 
@@ -149,6 +147,14 @@ namespace CarSalesManager
                 // Do not continue running the code.
                 return;
             }
+
+            // Add new customer to the lists
+            namesArrayList.Add(customerNameTextBox.Text);
+            phoneNumbersArrayList.Add(customerPhoneTextBox.Text);
+
+            // Call the displayAllCustomers event handler.
+            displayAllCustomersButton_Click(null, null);
+
 
             // Disable customer name and customer phone textboxes.
             customerNameTextBox.IsReadOnly = true;
@@ -781,18 +787,25 @@ namespace CarSalesManager
                 return;
             }
 
+
+            char firstLetter = char.ToUpper(newVehicleMakeToAdd[0]);
+            newVehicleMakeToAdd = newVehicleMakeToAdd.Replace(newVehicleMakeToAdd[0], firstLetter);
+
             // Call the binary search function.
             int foundInIndex = binarySearchVehicleMakes(newVehicleMakeToAdd);
 
             // If the returned value is -1 (not found), that means that the vehicle make is not in the list.
             if(foundInIndex == -1)
-            { 
+            {
+                vehicleMakeTextBox.Focus(FocusState.Programmatic);
+                vehicleMakeTextBox.SelectAll();
                 // Add the vehicle make to the list.
                 vehicleMakesArrayList.Add(newVehicleMakeToAdd);
                 // Sort the vehicle makes list.
                 vehicleMakesArrayList.Sort();
                 // Display all the make in the Summary Details TextBlock.
                 displayAllMakesButton_Click(null, null);
+                
             }
             else
             {
