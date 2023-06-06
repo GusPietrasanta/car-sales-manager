@@ -1,0 +1,174 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="CarSalesManager.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CarSalesManager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                     >
+
+    <!--  
+    Carlos Pietrasanta
+    18/11/2022
+    Assignment CarSalesV3   
+    -->
+    
+    <Grid Background="#95A2B2">
+        
+        <!-- Outer StackPanel that holds all the inner StackPanels -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            
+            <!-- App title/header -->
+            <TextBlock Text="Dodgy Brothers Motor Manager" FontSize="45" Margin="10" HorizontalAlignment="Center" FontFamily="Century Gothic" FontStyle="Italic" TextDecorations="Underline"/>
+            
+            <!-- Start of StackPanel that holds the 4 main vertical columns -->
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <!-- StackPanel holding first column: Customer Details and Calculations -->
+                <StackPanel Orientation="Vertical">
+
+                    <!-- Customer Details header -->
+                    <TextBlock Margin="10" Text="Customer Details:" FontSize="30"/>
+                    
+                    <!-- Customer Name TextBlock/TextBox pair -->
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                        <TextBlock Text="Customer Name:" MinWidth="160" FontSize="20"/>
+                        <TextBox x:ConnectionId='29' x:Name="customerNameTextBox" TextAlignment="Right" PlaceholderText="Enter customer name" Width="200" Background="LightGray" />
+                    </StackPanel>
+
+                    <!-- Customer Phone TextBlock/TextBox pair -->
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                        <TextBlock Text="Customer Phone:" MinWidth="160" FontSize="20"/>
+                        <TextBox x:ConnectionId='28' x:Name="customerPhoneTextBox" TextAlignment="Right" PlaceholderText="Enter customer phone" Width="200" Background="LightGray" />
+                    </StackPanel>
+
+                    <!-- Vehicle Price TextBlock/TextBox pair -->
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                        <TextBlock Text="Vehicle Price:" MinWidth="160" FontSize="20"/>
+                        <TextBox x:ConnectionId='27' x:Name="vehiclePriceTextBox" Width="200" TextAlignment="Right" PlaceholderText="Enter vehicle price" Background="LightGray" />
+                    </StackPanel>
+
+                    <!-- Trade-In Value TextBlock/TextBox pair -->
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                        <TextBlock Text="Trade-In Value:" MinWidth="160" FontSize="20"/>
+                        <TextBox x:ConnectionId='26' x:Name="tradeInTextBox" Width="200" TextAlignment="Right" PlaceholderText="Enter trade-in value" Background="LightGray" />
+                    </StackPanel>
+
+                    <!-- Calculations header -->
+                    <TextBlock Margin="10" Text="Calculations:" FontSize="30"/>
+
+                    <!-- Sub Amount TextBlock/TextBox pair -->
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                        <TextBlock Text="Sub Amount:" MinWidth="160" FontSize="20"/>
+                        <TextBox x:ConnectionId='25' x:Name="subAmountTextBox" IsReadOnly="True" Width="200" TextAlignment="Right" Background="LightGray" />
+                    </StackPanel>
+
+                    <!-- GST Amount TextBlock/TextBox pair -->
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                        <TextBlock Text="GST Amount:" MinWidth="160" FontSize="20"/>
+                        <TextBox x:ConnectionId='24' x:Name="gstAmountTextBox" IsReadOnly="True" Width="200" TextAlignment="Right" Background="LightGray" />
+                    </StackPanel>
+
+                    <!-- Final Amount TextBlock/TextBox pair -->
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                        <TextBlock Text="Final Amount:" MinWidth="160" FontSize="20"/>
+                        <TextBox x:ConnectionId='23' x:Name="finalAmountTextBox" IsReadOnly="True" Width="200" TextAlignment="Right" Background="LightGray" />
+                    </StackPanel>
+                    
+                </StackPanel>
+
+                
+                <!-- StackPanel holding second column: Warranty, Extras and Insurance-->
+                <StackPanel Orientation="Vertical">
+                    
+                    <!-- ComboBox for Vehicle Warranty -->
+                    <TextBlock Margin="10" Text="Vehicle Warranty:" FontSize="30"/>
+                    <ComboBox x:ConnectionId='15' x:Name="vehicleWarrantyComboBox" Background="LightGray" Margin="10" Width="250" SelectedIndex="0">
+                        <x:String>1 Year: No charge</x:String>
+                        <x:String>2 Years: 5% of Vehicle Cost</x:String>
+                        <x:String>3 Years: 10% of Vehicle Cost</x:String>
+                        <x:String>5 Years: 20% of Vehicle Cost</x:String>
+                    </ComboBox>
+
+                    <!-- CheckBoxes for Optional Extras -->
+                    <TextBlock Margin="10" Text="Optional Extras:" FontSize="30" />
+                    <CheckBox x:ConnectionId='16' x:Name="windowsTintingCheckBox" Margin="10,0,0,0" Content="Windows Tinting ($150)"/>
+                    <CheckBox x:ConnectionId='17' x:Name="ducoProtectionCheckBox" Margin="10,0,0,0" Content="Duco Protection ($180)"/>
+                    <CheckBox x:ConnectionId='18' x:Name="floorMatsCheckBox" Margin="10,0,0,0" Content="Floor Mats ($320)"/>
+                    <CheckBox x:ConnectionId='19' x:Name="deluxeSoundSystemCheckBox" Margin="10,0,0,0" Content="Deluxe Sound System ($350)"/>
+
+                    <!-- ToggleSwitch for Insurance Policy -->
+                    <TextBlock Text="Insurance Policy:" Margin="10,0,0,0" FontSize="30" />
+                    <ToggleSwitch x:ConnectionId='20' x:Name="insurancePolicyToggleSwitch" Margin="10,10,0,0" HorizontalAlignment="Left" OffContent="No" OnContent="Yes"                                              />
+
+                    <!-- RadioButtons for Driver Age -->
+                    <RadioButton x:ConnectionId='21' Margin="10,10,0,0" x:Name="under25RadioButton" GroupName="age" Content="Driver Under 25 Years (Plus 20%)" IsEnabled="False" />
+                    <RadioButton x:ConnectionId='22' Margin="10,10,0,0" x:Name="over25RadioButton" GroupName="age" Content="Driver Over 25 Years (Plus 10%)" IsEnabled="False" />
+
+                </StackPanel>
+
+
+                <!-- StackPanel holding third column: Summary Details -->
+                <StackPanel Margin="10">
+                    <TextBlock Text="Summary Details" FontSize="30" HorizontalAlignment="Center"/>
+                    <Border BorderThickness="1" CornerRadius="10" BorderBrush="Black">
+                        <TextBlock x:ConnectionId='14' x:Name="summaryDetailsTextBlock" Margin="2" Height="430" Width="300" Text="" Padding="10,0,10,10" FontSize="20" LineHeight="40" LineStackingStrategy="BlockLineHeight"/>
+                    </Border>
+                </StackPanel>
+                
+
+                <!-- StackPanel holding fourth column: Vehicle Image -->
+                <StackPanel Margin="10" VerticalAlignment="Top">
+                    <Button x:ConnectionId='7' x:Name="displayAllCustomersButton" Margin="5" Width="260"                                        >Display all Customers</Button>
+                    <Button x:ConnectionId='8' x:Name="searchNameButton" Margin="5" Width="260"                               >Search Name</Button>
+                    <Button x:ConnectionId='9' x:Name="deleteName" Margin="5" Width="260"                         >Delete Name</Button>
+                    <Button x:ConnectionId='10' x:Name="displayAllMakesButton" Margin="5" Width="260"                                    >Display All Makes</Button>
+                    <Button x:ConnectionId='11' x:Name="binarySearchMakeButton" Margin="5" Width="260"                                     >Binary Search Make</Button>
+                    <Button x:ConnectionId='12' x:Name="insertMakeButton" Margin="5" Width="260"                               >Insert Make</Button>
+                    <TextBox x:ConnectionId='13' x:Name="vehicleMakeTextBox" Width="260"></TextBox>
+                    <Border HorizontalAlignment="Center" BorderBrush="LightBlue" Margin="0,10,0,0" BorderThickness="1" Background="#95A2B2" Padding="1" CornerRadius="15">
+                        <Image Source="Images/bmw.png" Height="180" Width="260" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                    </Border>
+                </StackPanel>
+
+            <!-- End of StackPanel that holds 4 main columns -->
+            </StackPanel>
+            
+            
+            <!-- Start of StackPanel that holds Collection Date, Pickup Time, Save, Reset and Summary buttons horizontally -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <!-- StackPanel for Collection Date -->
+                <StackPanel Orientation="Vertical" Margin="10" VerticalAlignment="Center">
+                    <TextBlock Text="Collection Date:" Margin="0,0,0,2" HorizontalAlignment="Center" FontSize="20" />
+                    <CalendarDatePicker x:ConnectionId='6' x:Name="collectionDatePicker" Width="180" Background="LightGray" HorizontalAlignment="Center" PlaceholderText="Select Collection Date"/>
+                </StackPanel>
+                
+                <!-- StackPanel for Pickup Time -->
+                <StackPanel Orientation="Vertical" Margin="10" >
+                    <TextBlock Text="Pickup Time:" Margin="0,0,0,2" FontSize="20" HorizontalAlignment="Center" />
+                    <TimePicker x:ConnectionId='5' HorizontalAlignment="Center" Background="LightGray" x:Name="pickUpTimePicker" />
+                </StackPanel>
+                
+                <!-- Save Button -->
+                <Button x:ConnectionId='2' Content="Save" x:Name="saveButton" Padding="10" FontSize="25" Width="170" Margin="10" BorderThickness="2" BorderBrush="Black"                          />
+                <!-- Reset Button -->
+                <Button x:ConnectionId='3' Content="Reset" x:Name="resetButton" Padding="10" FontSize="25" Width="170" Margin="10" BorderThickness="2" BorderBrush="Black"                           />
+                <!-- Summary Button -->
+                <Button x:ConnectionId='4' Content="Summary" x:Name="summaryButton" Padding="10" FontSize="25" Width="170" Margin="10" BorderThickness="2" BorderBrush="Black"                             />
+
+            <!-- End of StackPanel that holds Collection Date, Pickup Time, Save, Reset and Summary buttons horizontally -->
+            </StackPanel>
+
+            <!-- StackPanel for Developer Name and ITWorks logo -->
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Developer: Carlos Pietrasanta for " FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image Source="Images/logo.png" Height="47" Width="95" VerticalAlignment="Center"/>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Page>
+
+

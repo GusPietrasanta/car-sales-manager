@@ -1,0 +1,1 @@
+C:\Users\USER\Documents\car-sales-manager\CarSalesManager\CarSalesManager.csproj;x64
